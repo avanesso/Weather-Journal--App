@@ -18,30 +18,25 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-// Setup Server
+// Create Server: Adding a console.log() to the server callback function for testing purposes
 const port = 8000;
-//Spin up server
-
 const server = app.listen(port, ()=>{console.log(`server running\nrunning on localhost: ${port}`)});
 
-/*const server = app.listen(port, listening);
-function listening() {
-    console.log('server running');
-    console.log(`running on localhost: ${port}`);
-};*/
-
-// GET route
-app.get('/data', (req, res) => {
+   
+// GET route: Adding a GET route that returns the projectData object in server code 
+app.get('/Json', (req, res) => {
     console.log('GET request');
     res.send(projectData);
 });
 
-// POST route
-app.post('/', (req, res) => {
-    projectData.date = req.body.date;
-    projectData.temperature = req.body.main.temp;
-    projectData.feelings = req.body.feelings;
-    projectData.name= req.body.name;
+// POST route: Adding a POST route that adds incoming data to projectData
+app.post('/incoming', (req, res) => {
+    projectData['date'] = req.body.date;
+    projectData['temp'] = req.body.temp;
+    projectData['content']= req.body.content;
+    projectData['name']= req.body.name;
+    res.send(projectData);
     console.log('POST request');
-    res.end();
-});
+  });
+ 
+
