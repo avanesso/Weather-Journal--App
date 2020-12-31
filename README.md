@@ -23,4 +23,5 @@ following succesful instllation, all thats needed is to download **website** and
 
 # Preview of an App
 
-![demo](https://user-images.githubusercontent.com/67160051/103304196-fc054e80-49d5-11eb-8e74-76f46df66357.jpg)
+![demo](https://user-images.githubusercontent.com/67160051/103427492-5dbce880-4b8f-11eb-9da9-a68996cbdef2.jpg)
+
